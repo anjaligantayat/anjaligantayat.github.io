@@ -37,6 +37,13 @@
             Array.from(newMain.attributes).forEach(function(attr) {
               mainEl.setAttribute(attr.name, attr.value);
             });
+            // Re-execute any script tags (e.g. guestbook embed)
+            Array.from(mainEl.querySelectorAll('script')).forEach(function(old) {
+              var s = document.createElement('script');
+              Array.from(old.attributes).forEach(function(a) { s.setAttribute(a.name, a.value); });
+              s.textContent = old.textContent;
+              old.parentNode.replaceChild(s, old);
+            });
           }
 
           // Swap lightbox if present

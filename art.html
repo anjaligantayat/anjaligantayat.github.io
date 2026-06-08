@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>art · aj.io</title>
+  <style>* { cursor: url('images/normal.cur'), auto !important; }</style>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">♡ aj.io</a>
+    <ul class="nav-links">
+      <li><a href="index.html">home</a></li>
+      <li><a href="media.html">media</a></li>
+      <li><a href="characters.html">characters</a></li>
+      <li><a href="art.html" class="active">art</a></li>
+      <li><a href="outfits.html">outfits</a></li>
+      <li><a href="songs.html">songs</a></li>
+      <li><a href="games.html">games</a></li>
+      <li><a href="blog.html">blog</a></li>
+      <li><a href="guestbook.html">guestbook</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page">
+  <h1 class="page-title">my art ♡</h1>
+  <p class="page-subtitle">little things i've made ˚ ✿ click any piece to enlarge</p>
+
+  <!-- ════════════════════════════════════════════════
+       HOW TO ADD NEW ART:
+       1. Save your image to the images/art/ folder
+       2. Copy one of the <div class="gallery-item"> blocks below
+       3. Paste it anywhere in the gallery-grid div
+       4. Update the image src and the caption text
+       ════════════════════════════════════════════════ -->
+
+  <div class="gallery-grid" id="artGallery">
+
+    <!-- ── ART PIECE 1 ── Copy this block to add more -->
+    <div class="gallery-item" onclick="openLightbox('images/art/placeholder.png')">
+      <img src="images/art/placeholder.png" alt="art piece"
+           onerror="this.parentElement.querySelector('.gallery-caption').textContent='♡ coming soon'; this.style.display='none';" />
+      <div class="gallery-caption">Title or date ♡</div>
+    </div>
+    <!-- ── END ART PIECE 1 ── -->
+
+    <!-- ── ART PIECE 2 ── -->
+    <div class="gallery-item" onclick="openLightbox('images/art/placeholder.png')">
+      <img src="images/art/placeholder.png" alt="art piece"
+           onerror="this.parentElement.querySelector('.gallery-caption').textContent='♡ coming soon'; this.style.display='none';" />
+      <div class="gallery-caption">Title or date ♡</div>
+    </div>
+    <!-- ── END ART PIECE 2 ── -->
+
+    <!-- ── ART PIECE 3 ── -->
+    <div class="gallery-item" onclick="openLightbox('images/art/placeholder.png')">
+      <img src="images/art/placeholder.png" alt="art piece"
+           onerror="this.parentElement.querySelector('.gallery-caption').textContent='♡ coming soon'; this.style.display='none';" />
+      <div class="gallery-caption">Title or date ♡</div>
+    </div>
+    <!-- ── END ART PIECE 3 ── -->
+
+    <!-- ── ART PIECE 4 ── -->
+    <div class="gallery-item" onclick="openLightbox('images/art/placeholder.png')">
+      <img src="images/art/placeholder.png" alt="art piece"
+           onerror="this.parentElement.querySelector('.gallery-caption').textContent='♡ coming soon'; this.style.display='none';" />
+      <div class="gallery-caption">Title or date ♡</div>
+    </div>
+    <!-- ── END ART PIECE 4 ── -->
+
+  </div>
+</main>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+  <img id="lightboxImg" src="" alt="enlarged view" onclick="event.stopPropagation()" />
+</div>
+
+<footer>
+  made with ♡ by aj &nbsp;·&nbsp; <a href="https://www.youtube.com/@aj__io" style="color:var(--rose)">@aj__io</a>
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/effects.js"></script>
+</body>
+</html>

@@ -4,6 +4,21 @@ A quick guide for adding new content — no coding knowledge needed!
 
 ---
 
+## Publishing changes to your live site
+
+After editing any file, open **Terminal** and run these 3 commands:
+
+```
+cd ~/YT-Website
+git add .
+git commit -m "describe what you changed"
+git push
+```
+
+Replace the commit message with anything short — `"new blog post"`, `"updated bio"`, `"added outfit"`. Wait about a minute and your live site at **https://ajio7.vercel.app** will update.
+
+---
+
 ## First: how to open and edit files
 
 Double-clicking an HTML file opens it in your **browser** — that's read-only. To actually edit the file, you need a **text editor**. Two options:

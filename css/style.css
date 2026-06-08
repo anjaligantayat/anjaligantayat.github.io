@@ -683,6 +683,95 @@ nav {
   box-shadow: 0 4px 20px var(--shadow);
 }
 
+/* ── HTMLCOMMENTBOX THEME ── */
+#HCB_comment_box {
+  font-family: 'Nunito', sans-serif !important;
+  color: var(--text) !important;
+}
+
+/* "Comments" heading */
+#HCB_comment_box h3 {
+  font-family: 'Dancing Script', cursive !important;
+  color: var(--rose) !important;
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Name input + textarea */
+#HCB_comment_box #hcb_form_name,
+#HCB_comment_box #hcb_form_content {
+  font-family: 'Nunito', sans-serif !important;
+  font-size: 0.95rem !important;
+  color: var(--text) !important;
+  background: #fff !important;
+  border: 1.5px solid var(--border) !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 0.55rem 0.85rem !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s !important;
+}
+#HCB_comment_box #hcb_form_name:focus,
+#HCB_comment_box #hcb_form_content:focus {
+  border-color: var(--pink-mid) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(244,167,195,0.2) !important;
+}
+
+/* Submit "Comment" button */
+#HCB_comment_box #hcb_submit {
+  background: var(--pink-mid) !important;
+  border: none !important;
+  border-radius: 999px !important;
+  color: #fff !important;
+  font-family: 'Nunito', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  padding: 0.5rem 1.6rem !important;
+  cursor: pointer !important;
+  transition: background 0.2s !important;
+}
+#HCB_comment_box #hcb_submit:hover {
+  background: var(--rose) !important;
+}
+
+/* "Add Image" button */
+#HCB_comment_box .btn-secondary {
+  background: transparent !important;
+  border: 1.5px solid var(--border) !important;
+  border-radius: 999px !important;
+  color: var(--text-muted) !important;
+  font-family: 'Nunito', sans-serif !important;
+  font-size: 0.9rem !important;
+  padding: 0.45rem 1.2rem !important;
+  transition: border-color 0.2s, color 0.2s !important;
+}
+#HCB_comment_box .btn-secondary:hover {
+  border-color: var(--pink-mid) !important;
+  color: var(--rose) !important;
+}
+
+/* "Html Comment Box" promo link + other small links */
+#HCB_comment_box a:not(.btn-secondary) {
+  color: var(--pink-dark) !important;
+}
+
+/* Individual posted comments */
+#HCB_comment_box .comment {
+  border-bottom: 1px solid var(--border) !important;
+  padding-bottom: 1rem !important;
+}
+#HCB_comment_box .hcb-comment-body {
+  color: var(--text) !important;
+  font-family: 'Nunito', sans-serif !important;
+}
+#HCB_comment_box .date {
+  color: var(--text-muted) !important;
+}
+#HCB_comment_box .hcb-comment-tb button {
+  color: var(--pink-dark) !important;
+}
+
 /* ── EMPTY PLACEHOLDER ── */
 .empty-note {
   text-align: center;

@@ -17,6 +17,8 @@
 
   // ── SPA Navigation ──
   function isRootPage(href) {
+    // guestbook uses an external embed that needs a real page load to work
+    if (href === 'guestbook.html') return false;
     return href.endsWith('.html') && !href.includes('/');
   }
 

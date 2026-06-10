@@ -850,6 +850,48 @@ footer {
   margin: 2rem 0 1.5rem;
 }
 
+/* ── FOOTER TOOLTIP ── */
+.aj-tooltip {
+  position: relative;
+  cursor: pointer;
+  color: var(--rose);
+  font-weight: 700;
+}
+
+.tooltip-text {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--card-bg);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.85rem;
+  font-size: 0.82rem;
+  color: var(--text);
+  white-space: nowrap;
+  box-shadow: 0 4px 14px var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+/* little arrow */
+.tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--border);
+}
+
+.aj-tooltip:hover .tooltip-text {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 600px) {
   .page { padding: 1.5rem 1rem 3rem; }

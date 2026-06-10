@@ -325,12 +325,38 @@ nav {
   background: var(--pink-light);
   margin-bottom: 0.75rem;
   border: 2px solid var(--border);
+  position: relative;
 }
 
 .char-img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.char-img-wrap:hover img {
+  opacity: 0.15;
+}
+
+.char-hover-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.88rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.char-img-wrap:hover .char-hover-text {
+  opacity: 1;
 }
 
 .char-name {

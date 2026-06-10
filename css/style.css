@@ -154,6 +154,16 @@ nav {
   gap: 1.25rem;
 }
 
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .media-grid { grid-template-columns: 1fr; }
+}
+
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

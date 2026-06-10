@@ -28,7 +28,16 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--pink-mid) var(--pink-light);
 }
+
+/* Chrome / Safari / Edge */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--pink-light); }
+::-webkit-scrollbar-thumb { background: var(--pink-mid); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--rose); }
 
 body {
   font-family: 'Nunito', sans-serif;

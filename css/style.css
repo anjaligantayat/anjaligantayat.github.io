@@ -865,12 +865,6 @@ footer {
    COSMETIC EFFECTS
    ════════════════════════════════════════════ */
 
-/* ── TYPING CURSOR BLINK ── */
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0; }
-}
-
 /* ── CURSOR TRAIL ──
    Tiny symbols that appear behind the mouse and fade out */
 .cursor-trail {

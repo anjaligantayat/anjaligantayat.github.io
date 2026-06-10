@@ -106,34 +106,4 @@
     }
   });
 
-  // ── TYPING ANIMATION (hero bio) ──
-  function typeBio() {
-    var bio = document.querySelector('.hero-bio');
-    if (!bio) return;
-    var chars = Array.from(bio.textContent.trim());
-    bio.textContent = '';
-
-    // blinking cursor
-    var cursor = document.createElement('span');
-    cursor.textContent = '|';
-    cursor.style.cssText = 'animation:blink 0.7s step-end infinite; color:var(--pink-mid); font-weight:400;';
-    bio.appendChild(cursor);
-
-    var i = 0;
-    function typeNext() {
-      if (i < chars.length) {
-        bio.insertBefore(document.createTextNode(chars[i]), cursor);
-        i++;
-        setTimeout(typeNext, 22);
-      } else {
-        setTimeout(function () { cursor.remove(); }, 900);
-      }
-    }
-    setTimeout(typeNext, 300);
-  }
-
-  // expose so app.js can re-trigger on SPA home navigation
-  window._typeBio = typeBio;
-  typeBio();
-
 })();

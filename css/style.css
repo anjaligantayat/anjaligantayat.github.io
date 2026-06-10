@@ -144,7 +144,7 @@ nav {
 
 .card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px var(--shadow);
+  box-shadow: 0 8px 24px var(--shadow), 0 0 18px rgba(244, 167, 195, 0.5);
 }
 
 /* ── GRID LAYOUTS ── */

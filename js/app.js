@@ -60,6 +60,11 @@
             else document.body.appendChild(newLb);
           }
 
+          // Re-trigger bio typing if navigating to home
+          if (url.includes('index.html') || url.endsWith('/')) {
+            setTimeout(function () { if (window._typeBio) window._typeBio(); }, 50);
+          }
+
           // Update title
           document.title = doc.title;
 

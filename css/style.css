@@ -155,14 +155,17 @@ nav {
 }
 
 .media-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  align-items: start;
+  columns: 3;
+  column-gap: 1.25rem;
+}
+
+.media-grid .card {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
 }
 
 @media (max-width: 600px) {
-  .media-grid { grid-template-columns: 1fr; }
+  .media-grid { columns: 1; }
 }
 
 .grid-3 {
